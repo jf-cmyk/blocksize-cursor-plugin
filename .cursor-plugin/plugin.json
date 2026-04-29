@@ -12,7 +12,7 @@
   "homepage": "https://mcp.blocksize.info",
   "repository": "https://github.com/jf-cmyk/blocksize-cursor-plugin",
   "license": "MIT",
-  "logo": "assets/logo.svg",
+  "logo": "assets/logo.png",
   "keywords": [
     "market-data",
     "mcp",
