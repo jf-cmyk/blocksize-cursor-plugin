@@ -1,0 +1,36 @@
+{
+  "$schema": "https://cursor.com/schemas/cursor-plugin/plugin.json",
+  "name": "blocksize-market-data",
+  "displayName": "Blocksize Market Data",
+  "version": "1.0.0",
+  "description": "Remote MCP discovery for x402-paid real-time crypto, FX, and metals market data.",
+  "author": {
+    "name": "Blocksize Capital",
+    "email": "jf@blocksize-capital.com"
+  },
+  "publisher": "Blocksize Capital",
+  "homepage": "https://mcp.blocksize.info",
+  "repository": "https://github.com/jf-cmyk/blocksize-cursor-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "market-data",
+    "mcp",
+    "x402",
+    "crypto",
+    "fx",
+    "metals",
+    "usdc",
+    "solana",
+    "base"
+  ],
+  "category": "data-analytics",
+  "tags": [
+    "data",
+    "finance",
+    "market-data",
+    "payments",
+    "x402"
+  ],
+  "mcpServers": "./mcp.json"
+}
