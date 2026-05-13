@@ -29,24 +29,25 @@ from Blocksize's public paid API and registry flows:
 - The plugin is read-only and cannot execute trades, wallet transfers, or other
   account-changing actions.
 
-See [blocksize-market-data/README.md](blocksize-market-data/README.md) for the
-full plugin documentation.
+See [plugins/blocksize-market-data/README.md](plugins/blocksize-market-data/README.md)
+for the full plugin documentation.
 
 ## Marketplace Structure
 
 ```text
 .cursor-plugin/marketplace.json
-blocksize-market-data/
-  .cursor-plugin/plugin.json
-  mcp.json
-  README.md
-  CHANGELOG.md
-  LICENSE
-  assets/
+plugins/
+  blocksize-market-data/
+    .cursor-plugin/plugin.json
+    mcp.json
+    README.md
+    CHANGELOG.md
+    LICENSE
+    assets/
 ```
 
-The marketplace entry points at `blocksize-market-data`, which contains the
-installable Cursor plugin manifest and MCP server configuration.
+The marketplace entry points at `./plugins/blocksize-market-data`, which
+contains the installable Cursor plugin manifest and MCP server configuration.
 
 ## Blocksize MCP Server
 
