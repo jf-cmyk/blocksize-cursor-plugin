@@ -10,8 +10,9 @@ https://mcp.blocksize.info/cursor/mcp/
 ```
 
 After sign-in, Cursor can call Blocksize tools directly from an agent workflow.
-The integration is read-only and uses server-side daily credits. It is separate
-from Blocksize's public x402 registry endpoint and from the pay.sh deployment.
+The integration is read-only and includes 50 Blocksize data credits per user per
+day. It is separate from Blocksize's public x402 registry endpoint and from the
+pay.sh deployment.
 
 ## What Is Possible
 
@@ -24,6 +25,10 @@ Cursor agents can use this plugin to:
 - Fetch live crypto and supported equity bid/ask snapshots.
 - Fetch live FX bid, ask, and mid-rate snapshots.
 - Fetch supported metal spot-price snapshots.
+
+Each signed-in Cursor user receives 50 Blocksize data credits per day. Discovery
+tools are available for finding instruments and metadata; live data tools spend
+daily credits according to the server's active tool-cost configuration.
 
 Typical prompts:
 
@@ -59,7 +64,7 @@ Blocksize's hosted MCP server exposes these market-data surfaces to Cursor:
 | Equities bid/ask | `get_bid_ask` | Supported equity tickers through the shared bid/ask surface. |
 | FX | `get_fx_rate` | Bid, ask, and mid-rate snapshots for supported FX pairs such as `EURUSD`. |
 | Metals | `get_metal_price` | Spot snapshots for supported metal tickers such as `XAUUSD`. |
-| Credits | `get_credit_balance` | Shows the authenticated user's remaining daily Blocksize credits. |
+| Credits | `get_credit_balance` | Shows the authenticated user's remaining balance from the included 50 daily Blocksize credits. |
 
 The public health endpoint at `https://mcp.blocksize.info/health` also exposes
 current service metadata, supported links, pricing categories, and the active
@@ -101,8 +106,8 @@ https://mcp.blocksize.info/.well-known/oauth-authorization-server
 
 Users sign in with Blocksize through Clerk. The MCP client receives OAuth tokens
 and then calls the hosted MCP server over Streamable HTTP. Live data calls spend
-server-side daily Blocksize credits; Cursor does not submit x402 payment proofs
-or wallet transactions.
+from the included 50 daily Blocksize data credits; Cursor does not submit x402
+payment proofs or wallet transactions.
 
 ## Install
 
