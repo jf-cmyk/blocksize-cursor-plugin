@@ -11,8 +11,7 @@ https://mcp.blocksize.info/cursor/mcp/
 
 After sign-in, Cursor can call Blocksize tools directly from an agent workflow.
 The integration is read-only and includes 50 Blocksize data credits per user per
-day. It is separate from Blocksize's public x402 registry endpoint and from the
-pay.sh deployment.
+day. It is separate from Blocksize's public paid API and registry flows.
 
 ## What Is Possible
 
@@ -106,8 +105,8 @@ https://mcp.blocksize.info/.well-known/oauth-authorization-server
 
 Users sign in with Blocksize through Clerk. The MCP client receives OAuth tokens
 and then calls the hosted MCP server over Streamable HTTP. Live data calls spend
-from the included 50 daily Blocksize data credits; Cursor does not submit x402
-payment proofs or wallet transactions.
+from the included 50 daily Blocksize data credits. Cursor does not submit payment
+proofs, initiate wallet transactions, or spend funds directly.
 
 ## Install
 
@@ -134,12 +133,12 @@ cursor://anysphere.cursor-deeplink/mcp/install?name=blocksize-market-data&config
 This Cursor plugin does not:
 
 - Execute wallet transactions.
-- Submit x402 payment proofs.
-- Spend USDC directly from Cursor.
+- Submit payment proofs.
+- Spend funds directly from Cursor.
 - Place trades or orders.
 - Change accounts, balances, positions, or payment settings.
 
-For public x402 discovery and payment-oriented integrations, use:
+For Blocksize's public paid API and registry-oriented integrations, use:
 
 ```text
 https://mcp.blocksize.info/mcp/server/
@@ -172,9 +171,8 @@ Expected result:
 - OAuth callback: https://mcp.blocksize.info/cursor/mcp/auth/callback
 - OAuth protected-resource metadata: https://mcp.blocksize.info/.well-known/oauth-protected-resource/cursor/mcp/
 - OAuth authorization-server metadata: https://mcp.blocksize.info/.well-known/oauth-authorization-server
-- Public x402 MCP endpoint: https://mcp.blocksize.info/mcp/server/
+- Public MCP endpoint: https://mcp.blocksize.info/mcp/server/
 - OpenAPI reference: https://mcp.blocksize.info/openapi.json
-- x402scan listing: https://www.x402scan.com/server/3d0ad7cd-9e98-473a-8409-25813530df66
 
 ## License
 

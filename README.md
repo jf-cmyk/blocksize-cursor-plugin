@@ -21,10 +21,11 @@ Cursor.
 
 `blocksize-market-data` gives Cursor agents access to Blocksize's hosted MCP
 server at `mcp.blocksize.info`. The Cursor integration is intentionally separate
-from the public x402 registry endpoint and from the pay.sh deployment:
+from Blocksize's public paid API and registry flows:
 
 - Cursor uses Clerk OAuth sign-in and server-side daily credits.
-- Public registries use Blocksize's x402-oriented discovery and payment flows.
+- Public registry and payment integrations are handled outside this Cursor
+  plugin.
 - The plugin is read-only and cannot execute trades, wallet transfers, or other
   account-changing actions.
 
@@ -61,7 +62,7 @@ Cursor MCP endpoint:
 https://mcp.blocksize.info/cursor/mcp/
 ```
 
-Public x402 MCP endpoint:
+Public MCP endpoint:
 
 ```text
 https://mcp.blocksize.info/mcp/server/
