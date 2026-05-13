@@ -1,0 +1,17 @@
+{
+  "name": "blocksize-cursor-plugins",
+  "owner": {
+    "name": "Blocksize Capital",
+    "email": "jf@blocksize-capital.com"
+  },
+  "metadata": {
+    "description": "Blocksize Cursor plugins for authenticated market-data workflows."
+  },
+  "plugins": [
+    {
+      "name": "blocksize-market-data",
+      "source": "blocksize-market-data",
+      "description": "Clerk-authenticated remote MCP for read-only live crypto, equity, FX, and metals market data in Cursor."
+    }
+  ]
+}
