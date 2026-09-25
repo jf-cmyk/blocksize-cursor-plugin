@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.5.0
+
+- Describes the monthly free tier (15,000 live-data credits, attribution
+  required) and the subscription trial and pricing paths.
+- Documents the `FREE_TIER_*` error codes and the upgrade CTA in tool results.
+
+## 1.4.0
+
+- Documents the public account-plan recommender and sales-assisted conversion boundary.
+- Keeps discovery, authenticated live data, and paid x402 execution separate.
+
+## 1.3.0
+
+- Removes an unsupported manifest field so the plugin passes Cursor's official
+  schema.
+- Corrects provider-scoped OAuth discovery and removes unsafe shared-auth
+  deletion and mutable smoke-test instructions.
+- Hardens the shared skill against prompt injection, stale/future timestamps,
+  credit-draining retries, credential exposure, and direct-identifier output.
+- Adds deterministic, source-reconciled release packaging.
+
+## 1.2.0
+
+- Adds the portable `/use-blocksize-market-data` Agent Skill.
+- Adds verified response and connector-surface references shared with the
+  OpenAI and Claude packages.
+- Makes discovery-only, route-only, and live market-data results explicit.
+
 ## 1.1.0
 
 - Points the Cursor plugin at the Clerk-authenticated Cursor MCP endpoint.

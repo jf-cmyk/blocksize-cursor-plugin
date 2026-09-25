@@ -23,7 +23,9 @@ Cursor.
 server at `mcp.blocksize.info`. The Cursor integration is intentionally separate
 from Blocksize's public paid API and registry flows:
 
-- Cursor uses Clerk OAuth sign-in and server-side daily credits.
+- Cursor uses Clerk OAuth sign-in. Users with a verified email receive 15,000
+  free live-data credits every calendar month (evaluation licence, "Data by
+  Blocksize" attribution required); subscriptions start at EUR 49/month.
 - Public registry and payment integrations are handled outside this Cursor
   plugin.
 - The plugin is read-only and cannot execute trades, wallet transfers, or other
@@ -69,6 +71,7 @@ Public MCP endpoint:
 https://mcp.blocksize.info/mcp/server/
 ```
 
-The hosted server exposes discovery and market-data tools for crypto, equities,
-FX, and metals. Cursor users authenticate through Clerk, then consume daily
-server-side credits for live read-only data calls.
+The hosted server exposes discovery and market-data tools for crypto, equities
+(tokenized stocks such as AAPLx), FX, and metals. Cursor users authenticate
+through Clerk, then draw on the monthly free-tier credits for live read-only
+data calls.

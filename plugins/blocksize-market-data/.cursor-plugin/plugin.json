@@ -1,14 +1,13 @@
 {
-  "$schema": "https://cursor.com/schemas/cursor-plugin/plugin.json",
   "name": "blocksize-market-data",
   "displayName": "Blocksize Market Data",
-  "version": "1.1.0",
-  "description": "Clerk-authenticated remote MCP for read-only live crypto, equity, FX, and metals market data in Cursor.",
+  "version": "1.5.0",
+  "description": "Clerk-authenticated remote MCP for read-only live crypto, supported equity ticker, FX, and metals market data in Cursor.",
   "author": {
-    "name": "Blocksize Capital",
-    "email": "jf@blocksize-capital.com"
+    "name": "Blocksize Capital GmbH",
+    "email": "support@blocksize.info"
   },
-  "publisher": "Blocksize Capital",
+  "publisher": "Blocksize Capital GmbH",
   "homepage": "https://mcp.blocksize.info",
   "repository": "https://github.com/jf-cmyk/blocksize-cursor-plugin",
   "license": "MIT",
@@ -16,9 +15,11 @@
   "keywords": [
     "market-data",
     "mcp",
-    "crypto",
-    "equities",
-    "fx",
+        "crypto",
+        "equities",
+        "stocks",
+        "bid-ask",
+        "fx",
     "metals",
     "clerk",
     "oauth"
