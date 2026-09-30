@@ -23,7 +23,7 @@ Cursor.
 server at `mcp.blocksize.info`. The Cursor integration is intentionally separate
 from Blocksize's public paid API and registry flows:
 
-- Cursor uses Clerk OAuth sign-in. Users with a verified email receive 15,000
+- Cursor uses Clerk OAuth sign-in. Users with a verified email receive 30,000
   free live-data credits every calendar month (evaluation licence, "Data by
   Blocksize" attribution required); subscriptions start at EUR 49/month.
 - Public registry and payment integrations are handled outside this Cursor
@@ -46,6 +46,7 @@ plugins/
     CHANGELOG.md
     LICENSE
     assets/
+    skills/use-blocksize-market-data/
 ```
 
 The marketplace entry points at `./plugins/blocksize-market-data`, which
@@ -71,7 +72,9 @@ Public MCP endpoint:
 https://mcp.blocksize.info/mcp/server/
 ```
 
-The hosted server exposes discovery and market-data tools for crypto, equities
-(tokenized stocks such as AAPLx), FX, and metals. Cursor users authenticate
-through Clerk, then draw on the monthly free-tier credits for live read-only
-data calls.
+The hosted server exposes 18 read-only tools: discovery and market-data tools
+for crypto, equities (tokenized stocks such as AAPLx), FX, and metals, AMM state
+prices and VWAP windows, agent workflow products such as market briefs and
+pre-trade checks, and trader indicators. Cursor users authenticate through
+Clerk, then draw on the monthly free-tier credits for live read-only data
+calls.
